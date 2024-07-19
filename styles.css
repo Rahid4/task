@@ -1,12 +1,16 @@
 body {
     font-family: Arial, sans-serif;
+    height:100%;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #f0e68c 10%, #f08080 90%);
+    min-height: 100vh;
+    color: black; 
 }
 
 .navbar {
     background-color: #ff6f61;
-    padding: 10px 20px;
+    padding: 3px 15px;
 }
 
 .menu {
@@ -19,19 +23,88 @@ body {
     color: black;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 15px; 
-    text-align: center; 
-    flex-grow: 1; 
+    padding: 10px 15px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .menu-icon {
-    width: 40px; 
-    height: auto; 
+    width: 40px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 40px;
 }
 
 @media (max-width: 768px) {
     .menu a {
-        font-size: 14px; 
+        font-size: 14px;
         padding: 10px;
+    }
+}
+
+.content {
+    display: flex; 
+    flex-wrap: nowrap; 
+    width: 100%;
+    height: calc(100vh - 50px); 
+    
+}
+
+.txt {
+    flex: 1; 
+    padding: 20px; 
+    margin: 10px; 
+    border-radius: 10px; 
+}
+
+.txt h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    margin-left:60px;
+}
+
+.txt p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-left:60px;
+    margin-top:70px;
+}
+.txt a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 40px;
+    margin-left:60px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; 
+    color: #ffffff; 
+    background-color: #ff6f61; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: auto; 
+    max-width: 300px;
+}
+.image{
+    display: flex;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    
+    
+}
+
+@media (max-width: 768px) {
+    .txt, .image {
+        margin: 5px; 
+    }
+
+    .txt {
+        padding: 10px; 
     }
 }
